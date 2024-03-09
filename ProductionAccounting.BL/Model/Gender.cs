@@ -3,6 +3,7 @@
 
 namespace ProductionAccounting.BL.Model
 {
+    [Serializable]
     /// <summary>
     /// Пол.
     /// </summary>
