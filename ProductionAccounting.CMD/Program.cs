@@ -66,7 +66,7 @@ namespace ProductionAccounting.CMD
                     }
                     else
                     {
-                        Console.WriteLine("Неверный формат!");
+                        Console.WriteLine($"Неверный формат {name}а");
                     }
                 }
             }
