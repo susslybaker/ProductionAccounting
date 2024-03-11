@@ -10,25 +10,25 @@ using System.Threading.Tasks;
 namespace ProductionAccounting.BL.Controller.Tests
 {
     [TestClass()]
-    public class ProductionControllerTests
+    public class WorkControllerTests
     {
         [TestMethod()]
         public void AddTest()
         {
             // Arrange
             var userName = Guid.NewGuid().ToString();
-            var tareName = Guid.NewGuid().ToString();
+            var productivityName = Guid.NewGuid().ToString();
             var rnd = new Random();
             var userController = new UserController(userName);
-            var productionController = new ProductionController(userController.CurrentUser);
-            var tare = new Tare(tareName, rnd.Next(50, 500), rnd.Next(50, 500), rnd.Next(50, 500), rnd.Next(50, 500));
+            var workController = new WorkController(userController.CurrentUser);
+            var productivity = new Productivity(productivityName, rnd.Next(10,50));
 
             // Act
 
-            productionController.Add(tare, 100);
+            workController.Add(productivity, DateTime.Now, DateTime.Now.AddHours(12));
 
             // Assert
-            Assert.AreEqual(tare.Name, productionController.Production.Tares.First().Key.Name);
+            Assert.AreEqual(productivityName, workController.Productivities.First().Name);
         }
     }
 }

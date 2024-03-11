@@ -51,8 +51,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Languages\Messages_ru_ru.Designer.cs">
-      <DependentUpon>Messages_ru_ru.resx</DependentUpon>
+    <Compile Include="Languages\Messages.ru-ru.Designer.cs">
+      <DependentUpon>Messages.ru-ru.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -79,9 +79,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.en-us.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Messages_ru_ru.resx">
+    <EmbeddedResource Include="Languages\Messages.ru-ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Messages_ru_ru.Designer.cs</LastGenOutput>
+      <LastGenOutput>Messages.ru-ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\Messages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
