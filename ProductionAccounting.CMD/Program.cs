@@ -2,6 +2,8 @@
 using ProductionAccounting.BL.Model;
 using System;
 using System.ComponentModel;
+using System.Globalization;
+using System.Resources;
 
 namespace ProductionAccounting.CMD
 {
@@ -9,8 +11,12 @@ namespace ProductionAccounting.CMD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Вас приветствует приложение ProductionApplication");
-            Console.WriteLine("Введите имя пользователя");
+            var culture = CultureInfo.CreateSpecificCulture("en-us");
+            var resourceManager = new ResourceManager("ProductionAccounting.CMD.Languages.Messages", typeof(Program).Assembly);
+
+            Console.WriteLine(resourceManager.GetString("Hello", culture));
+           
+            Console.WriteLine(resourceManager.GetString("EnterName", culture));
 
            var name = Console.ReadLine();
 
