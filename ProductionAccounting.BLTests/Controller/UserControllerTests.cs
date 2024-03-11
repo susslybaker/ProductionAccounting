@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 namespace ProductionAccounting.BL.Controller.Tests
 {
     [TestClass()]
-    public class UserControllerTests
+    public class UserControllerTests : ControllerBase
     {
         
+
 
         [TestMethod()]
         public void SetNewUserDataTest()

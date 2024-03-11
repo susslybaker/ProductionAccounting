@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ControllerBase.cs" />
+    <Compile Include="Controller\ProductionController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Gender.cs" />
+    <Compile Include="Model\Production.cs" />
+    <Compile Include="Model\Tare.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
