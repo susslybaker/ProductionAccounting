@@ -8,7 +8,7 @@ namespace ProductionAccounting.BL.Controller
 {
     public abstract class ControllerBase
     {
-        private readonly IDataSaver manager = new DatabaseDataSaver();
+        private readonly IDataSaver manager = new SerializeDataSaver();
         protected void Save<T>(List<T> item) where T : class
         {
             manager.Save(item);
