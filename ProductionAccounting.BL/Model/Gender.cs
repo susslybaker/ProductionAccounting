@@ -9,15 +9,19 @@ namespace ProductionAccounting.BL.Model
     /// </summary>
     public class Gender
     {
+
+        public int Id { get;set; }
         /// <summary>
         /// Название.
         /// </summary>
-        public string Name { get; }
+        public string Name { get; set; }
         /// <summary>
         /// Создать новый пол.
         /// </summary>
         /// <param name="name">Именование пола.</param>
         /// <exception cref="ArgumentNullException"></exception>
+        
+        public Gender() { }
         public Gender(string name)
         {
             if (string.IsNullOrWhiteSpace(name))

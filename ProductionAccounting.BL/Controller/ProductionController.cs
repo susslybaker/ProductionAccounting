@@ -8,11 +8,10 @@ namespace ProductionAccounting.BL.Controller
     [Serializable]
     public class ProductionController : ControllerBase
     {
-        private const string TARES_FILE_NAME = "tares.dat";
-        private const string PRODS_FILE_NAME = "prods.dat";
+   
         private readonly User user;
-        public List<Tare> Tares { get; }
-        public Production Production { get; }
+        public List<Tare> Tares { get;  }
+        public Production Production { get;  }
 
         public ProductionController(User user)
         {
@@ -44,19 +43,19 @@ namespace ProductionAccounting.BL.Controller
 
         private Production GetProduction()
         {
-            return Load<Production>(PRODS_FILE_NAME) ?? new Production(user);
+            return Load<Production>().FirstOrDefault() ?? new Production(user);
         }
 
         private List<Tare> GetAllTares()
         {
-            return Load<List < Tare >> (TARES_FILE_NAME) ?? new List<Tare>(); 
+            return Load<Tare>() ?? new List<Tare>(); 
             
         }
 
         private void Save()
         {
-            Save(TARES_FILE_NAME, Tares);
-            Save(PRODS_FILE_NAME, Production);
+            Save(Tares);
+          
         }
     }
 }

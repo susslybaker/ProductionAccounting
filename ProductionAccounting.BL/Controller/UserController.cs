@@ -14,7 +14,7 @@ namespace ProductionAccounting.BL.Controller
     /// </summary>
     public class UserController : ControllerBase
     {
-        private const string  USER_FILE_NAME = "users.dat";
+ 
         /// <summary>
         /// Пользователь приложения.
         /// </summary>
@@ -46,7 +46,7 @@ namespace ProductionAccounting.BL.Controller
                 CurrentUser = new User(userName);
                 Users.Add(CurrentUser);
                 IsNewUser = true;
-                Save();
+              
             }
 
           
@@ -58,13 +58,11 @@ namespace ProductionAccounting.BL.Controller
         /// Получить список пользователей.
         /// </summary>
         /// <returns></returns>
-        private List<User>GetUsersData()
+        private List<User> GetUsersData()
         {
 
-            return Load<List<User>>(USER_FILE_NAME) ?? new List<User>();
-           
-            
-            
+            return Load<User>() ?? new List<User>();
+   
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)
@@ -84,7 +82,7 @@ namespace ProductionAccounting.BL.Controller
         /// </summary>
         public void Save()
         {
-            Save(USER_FILE_NAME, Users);
+            Save(Users);
         }
         /// <summary>
         /// Получить данные пользователя.

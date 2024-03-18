@@ -6,13 +6,22 @@ namespace ProductionAccounting.BL.Model
     [Serializable]
     public class Work
     {
-        public DateTime Start { get; }
+        public int Id { get; set; }
+        public DateTime Start { get; set; }
 
-        public DateTime Finish { get;  }
+        public Work() { }
+        public DateTime Finish { get; set; }
 
-        public Productivity Productivity { get;  }
+        public int ProductivityID { get; set; }
 
-        public User User { get; }
+        public virtual Productivity Productivity { get; set; }
+
+        public int UserID { get; set; }
+        public virtual User User { get; set; }
+
+        
+
+        
 
         public Work(DateTime start, DateTime finish, Productivity productivity, User user)
         {

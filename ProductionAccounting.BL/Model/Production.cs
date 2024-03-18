@@ -12,10 +12,14 @@ namespace ProductionAccounting.BL.Model
     [Serializable]
     public class Production
     {
+        public int Id { get; set; }
         public DateTime Day { get;  }
-        public Dictionary<Tare, double> Tares { get; }
+        public Dictionary<Tare, double> Tares { get; set; }
+        public Production() { }
 
-        public User User { get; }
+        public int  UserId { get; set; }
+
+        public virtual User User { get; set; }
 
         public Production(User user)
         {

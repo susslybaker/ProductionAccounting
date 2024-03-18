@@ -9,26 +9,27 @@ namespace ProductionAccounting.BL.Model
     [Serializable]
     public class Tare
     {
+        public int Id { get;set; }
       
-        public string Name { get;  }
+        public string Name { get; set; }
         /// <summary>
         /// Объем тары.
         /// </summary>
-        public double Volume { get;  }
+        public double Volume { get; set; }
         /// <summary>
         /// Средний вес тары.
         /// </summary>
-        public double Weight { get;  }
+        public double Weight { get; set; }
         /// <summary>
         /// Стоимость тары
         /// </summary>
-        public double Price { get;  }
+        public double Price { get; set; }
         /// <summary>
         /// Количество произведенной тары
         /// </summary>
-        public int NumbOfProduct { get; }
+        public int NumbOfProduct { get; set; }
 
-      
+        public Tare() { }
 
         public Tare(string name) : this(name, 0,0,0,0)
         {

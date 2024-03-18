@@ -10,10 +10,13 @@ namespace ProductionAccounting.BL.Model
     public class User
     {
         #region Свойства
+
+        public int Id { get; set; }
         /// <summary>
         /// Имя.
         /// </summary>
-        public string Name { get; }
+       
+        public string Name { get; set; }
         /// <summary>
         /// Пол.
         /// </summary>
@@ -30,6 +33,8 @@ namespace ProductionAccounting.BL.Model
         /// Рост.
         /// </summary>
         public double Height { get; set; }
+
+        public User() { }
 
         public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
 
